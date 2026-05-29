@@ -150,7 +150,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
       <a href="#contact" class="bg">Hire Me</a>
     </div>
     <div class="hstats">
-      <div><div class="sn" id="s1">3</div><div class="sl">Projects</div></div>
+      <div><div class="sn" id="s1">2</div><div class="sl">Projects</div></div>
       <div><div class="sn">2+</div><div class="sl">Years Exp</div></div>
       <div><div class="sn">50+</div><div class="sl">Edits Done</div></div>
       <div><div class="sn">5★</div><div class="sl">Rating</div></div>
@@ -176,7 +176,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
   <div class="lbl">Portfolio</div><h2>MY WORK</h2>
   <div class="vg" id="vg">
 
-    <!-- VIDEO 1 -->
+    <!-- VIDEO 1 — Portfolio Showcase (9:16 vertical) -->
     <div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
       <div class="vt r916">
         <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_0/v1778434403/PORTFLIO_VIDEO_ns0x5z.jpg"
@@ -188,28 +188,16 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
       <div class="vi"><div class="vn">Portfolio Showcase</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
     </div>
 
-    <!-- VIDEO 2 -->
-    <div class="vc" onclick="openM(this)" data-title="Cinematic Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778608110/eede27f43183b4d792061a0f4fb4511a_720w_wu9r3j.mp4">
-      <div class="vt r16">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_0/v1778608110/eede27f43183b4d792061a0f4fb4511a_720w_wu9r3j.jpg"
-          onerror="this.src='https://placehold.co/640x360/111/e8ff00?text=Cinematic+Edit'"
-          alt="Cinematic Edit"/>
+    <!-- VIDEO 2 — New Edit (9:16 vertical) -->
+    <div class="vc" onclick="openM(this)" data-title="Latest Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780051893/ava_raw_p6ogap.mp4">
+      <div class="vt r916">
+        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_0/v1780051893/ava_raw_p6ogap.jpg"
+          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Latest+Edit'"
+          alt="Latest Edit"/>
         <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         <span class="cat">Cinematic</span>
       </div>
-      <div class="vi"><div class="vn">Cinematic Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
-    </div>
-
-    <!-- VIDEO 3 -->
-    <div class="vc" onclick="openM(this)" data-title="Reel Edit" data-cat="Reel / Short" data-dur="0:25" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778607987/e6839b5597041c84180b6d48cecaed2d_360w_fxadyp.mp4">
-      <div class="vt r16">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_0/v1778607987/e6839b5597041c84180b6d48cecaed2d_360w_fxadyp.jpg"
-          onerror="this.src='https://placehold.co/640x360/111/e8ff00?text=Reel+Edit'"
-          alt="Reel Edit"/>
-        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <span class="cat">Reel / Short</span>
-      </div>
-      <div class="vi"><div class="vn">Reel Edit</div><div class="vm"><span>0:25</span><span>Reel · 2025</span></div></div>
+      <div class="vi"><div class="vn">Latest Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
     </div>
 
   </div>
@@ -248,7 +236,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
     <p class="ap">I'm Lokesh, a passionate video editor specializing in premium video production. With expertise in Adobe Premiere Pro and After Effects, I transform raw footage into polished, cinematic content.</p>
     <p class="ap">Every frame is intentional. Whether it's a fast-paced gaming montage, an emotional reel, or a cinematic brand video — I build experiences that keep viewers hooked from the first second.</p>
     <div class="ast">
-      <div class="as"><div class="n" id="s2">3</div><div class="l">Projects</div></div>
+      <div class="as"><div class="n" id="s2">2</div><div class="l">Projects</div></div>
       <div class="as"><div class="n">2+</div><div class="l">Years Exp</div></div>
       <div class="as"><div class="n">50+</div><div class="l">Edits Done</div></div>
       <div class="as"><div class="n">5★</div><div class="l">Rating</div></div>
@@ -335,15 +323,15 @@ function openM(card){
   const w=document.getElementById('mvw');
   if(i&&store[i]){
     const v=store[i];
-    if(v.type==='file'){w.innerHTML='<video src="'+v.url+'" controls autoplay style="max-height:75vh;width:100%"></video>';}
+    if(v.type==='file'){w.innerHTML='<video src="'+v.url+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
     else{
       const u=v.url;
       if(u.includes('youtube.com')||u.includes('youtu.be')){
         const id=u.includes('youtu.be')?u.split('/').pop().split('?')[0]:new URLSearchParams(u.split('?')[1]).get('v');
         w.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1" frameborder="0" allowfullscreen style="aspect-ratio:16/9;width:100%"></iframe>';
-      }else{w.innerHTML='<video src="'+u+'" controls autoplay style="max-height:75vh;width:100%"></video>';}
+      }else{w.innerHTML='<video src="'+u+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
     }
-  }else if(src){w.innerHTML='<video src="'+src+'" controls autoplay style="max-height:75vh;width:100%"></video>';}
+  }else if(src){w.innerHTML='<video src="'+src+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
   document.getElementById('modal').classList.add('active');
 }
 function closeM(){document.getElementById('modal').classList.remove('active');document.getElementById('mvw').innerHTML='';}
