@@ -122,6 +122,10 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 .mttl{font-family:var(--fd);font-size:1.7rem;letter-spacing:.06em}
 .mmet{font-size:.74rem;color:var(--muted);margin-top:.2rem}
 @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+.tabs{display:flex;gap:.8rem;margin-bottom:2rem;flex-wrap:wrap}
+.tab{padding:.65rem 1.8rem;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:var(--fb);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .2s}
+.tab.active{background:var(--accent);color:#000;border-color:var(--accent)}
+.tab:hover:not(.active){border-color:var(--white);color:var(--white)}
 @media(max-width:900px){.nav-links{display:none}#about{grid-template-columns:1fr}.cw{grid-template-columns:1fr}.af{grid-template-columns:1fr}.fg.full{grid-column:1}}
 </style>
 </head>
@@ -150,7 +154,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
       <a href="#contact" class="bg">Hire Me</a>
     </div>
     <div class="hstats">
-      <div><div class="sn" id="s1">3</div><div class="sl">Projects</div></div>
+      <div><div class="sn" id="s1">4</div><div class="sl">Projects</div></div>
       <div><div class="sn">2+</div><div class="sl">Years Exp</div></div>
       <div><div class="sn">50+</div><div class="sl">Edits Done</div></div>
       <div><div class="sn">5★</div><div class="sl">Rating</div></div>
@@ -174,38 +178,55 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 
 <section id="works">
   <div class="lbl">Portfolio</div><h2>MY WORK</h2>
-  <div class="vg" id="vg">
 
-    <!-- VIDEO 1 — Portfolio Showcase (9:16 vertical) -->
+  <!-- TABS -->
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('short')">📱 Short Videos</button>
+    <button class="tab" onclick="switchTab('long')">🎬 Long Videos</button>
+  </div>
+
+  <!-- SHORT VIDEOS -->
+  <div class="vg" id="tab-short">
+
     <div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
       <div class="vt r916">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_5,w_400,h_711,c_fill,g_auto/v1778434403/PORTFLIO_VIDEO_ns0x5z.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Portfolio+Showcase'"
-          alt="Portfolio Showcase"/>
+        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1778434403/PORTFLIO_VIDEO_ns0x5z.jpg"
+          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Portfolio+Showcase'" alt="Portfolio Showcase"/>
         <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         <span class="cat">Cinematic</span>
       </div>
       <div class="vi"><div class="vn">Portfolio Showcase</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
     </div>
 
-    <!-- VIDEO 2 — Latest Edit (9:16 vertical) -->
     <div class="vc" onclick="openM(this)" data-title="Latest Edit" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780051893/ava_raw_p6ogap.mp4">
       <div class="vt r916">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_5,w_400,h_711,c_fill,g_auto/v1780051893/ava_raw_p6ogap.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Latest+Edit'"
-          alt="Latest Edit"/>
+        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780051893/ava_raw_p6ogap.jpg"
+          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Latest+Edit'" alt="Latest Edit"/>
         <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         <span class="cat">Cinematic</span>
       </div>
       <div class="vi"><div class="vn">Latest Edit</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
     </div>
 
-    <!-- VIDEO 3 — AI Selling Edit (9:16 vertical) -->
-    <div class="vc" onclick="openM(this)" data-title="AI Selling Edit" data-cat="Cinematic" data-dur="0:28" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780145820/Ai_selling_qrjx80.mp4">
+    <div class="vc" onclick="openM(this)" data-title="Internship Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780471224/Intership_Edit_upgci9.mp4">
       <div class="vt r916">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_5,w_400,h_711,c_fill,g_auto/v1780145820/Ai_selling_qrjx80.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=AI+Selling+Edit'"
-          alt="AI Selling Edit"/>
+        <img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780471224/Intership_Edit_upgci9.jpg"
+          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Internship+Edit'" alt="Internship Edit"/>
+        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+        <span class="cat">Cinematic</span>
+      </div>
+      <div class="vi"><div class="vn">Internship Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
+    </div>
+
+  </div>
+
+  <!-- LONG VIDEOS -->
+  <div class="vg" id="tab-long" style="display:none">
+
+    <div class="vc" onclick="openM(this)" data-title="AI Selling Edit" data-cat="Cinematic" data-dur="0:28" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780145820/Ai_selling_qrjx80.mp4">
+      <div class="vt r16">
+        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_640,h_360,c_fill,g_auto/v1780145820/Ai_selling_qrjx80.jpg"
+          onerror="this.src='https://placehold.co/640x360/111/e8ff00?text=AI+Selling+Edit'" alt="AI Selling Edit"/>
         <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
         <span class="cat">Cinematic</span>
       </div>
@@ -213,22 +234,9 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
     </div>
 
   </div>
+
 </section>
 
-<section id="add">
-  <div class="lbl">Manage</div><h2>ADD VIDEO</h2>
-  <p style="color:var(--muted);font-size:.84rem;margin-top:-2rem;margin-bottom:.5rem">Apna video + khud ki thumbnail upload karo — koi mismatch nahi!</p>
-  <div class="af">
-    <div class="fg"><label>Video Title *</label><input type="text" id="it" placeholder="e.g. Free Fire Montage"/></div>
-    <div class="fg"><label>Category *</label><select id="ic"><option>Gaming</option><option>Cinematic</option><option>Reel / Short</option><option>Brand Video</option><option>Other</option></select></div>
-    <div class="fg"><label>Duration (manually type) *</label><input type="text" id="id" placeholder="e.g. 1:30"/></div>
-    <div class="fg"><label>Year</label><input type="text" id="iy" placeholder="2025"/></div>
-    <div class="fg full"><label>Video File</label><input type="file" id="ivf" accept="video/*"/><input type="text" id="ivu" placeholder="OR paste Cloudinary / YouTube link" style="margin-top:.5rem"/></div>
-    <div class="fg full"><label>Custom Thumbnail *</label><input type="file" id="ith" accept="image/*" onchange="pT(event)"/><small>⚠️ Jo image upload karoge wahi thumbnail show hogi — apni khud ki lagao!</small></div>
-    <div id="tp"><img id="tpi" src="" alt=""/><span>✅ Thumbnail ready!</span></div>
-    <button class="badd" onclick="addV()">+ Add to Portfolio</button>
-  </div>
-</section>
 
 <section id="about">
   <div class="aiw">
@@ -248,7 +256,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
     <p class="ap">I'm Lokesh, a passionate video editor specializing in premium video production. With expertise in Adobe Premiere Pro and After Effects, I transform raw footage into polished, cinematic content.</p>
     <p class="ap">Every frame is intentional. Whether it's a fast-paced gaming montage, an emotional reel, or a cinematic brand video — I build experiences that keep viewers hooked from the first second.</p>
     <div class="ast">
-      <div class="as"><div class="n" id="s2">3</div><div class="l">Projects</div></div>
+      <div class="as"><div class="n" id="s2">4</div><div class="l">Projects</div></div>
       <div class="as"><div class="n">2+</div><div class="l">Years Exp</div></div>
       <div class="as"><div class="n">50+</div><div class="l">Edits Done</div></div>
       <div class="as"><div class="n">5★</div><div class="l">Rating</div></div>
@@ -296,6 +304,12 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 </div>
 
 <script>
+function switchTab(type){
+  document.getElementById('tab-short').style.display = type==='short'?'grid':'none';
+  document.getElementById('tab-long').style.display = type==='long'?'grid':'none';
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  event.target.classList.add('active');
+}
 const store={};let idx=1,pThumb=null;
 function pT(e){const f=e.target.files[0];if(!f)return;pThumb=f;document.getElementById('tpi').src=URL.createObjectURL(f);document.getElementById('tp').classList.add('show')}
 function addV(){
