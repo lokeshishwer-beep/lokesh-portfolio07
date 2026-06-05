@@ -61,6 +61,9 @@ h2{font-family:var(--fd);font-size:clamp(2.4rem,6vw,5rem);letter-spacing:.04em;l
 .r16{padding-top:56.25%}.r916{padding-top:177.77%}
 .vt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .vc:hover .vt img{transform:scale(1.05)}
+/* Video preview on hover for cards without thumbnail */
+.vt video.preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
+.vc:hover .vt video.preview{opacity:1}
 .po{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4);opacity:0;transition:opacity .25s}
 .vc:hover .po{opacity:1}
 .pc{width:52px;height:52px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center}
@@ -138,7 +141,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <a href="#contact" class="bg">Hire Me</a>
 </div>
 <div class="hstats">
-<div><div class="sn" id="s1">5</div><div class="sl">Projects</div></div>
+<div><div class="sn">5</div><div class="sl">Projects</div></div>
 <div><div class="sn">2+</div><div class="sl">Years Exp</div></div>
 <div><div class="sn">50+</div><div class="sl">Edits Done</div></div>
 <div><div class="sn">5★</div><div class="sl">Rating</div></div>
@@ -167,7 +170,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <button class="tab" onclick="switchTab('long',event)">🎬 Long Videos</button>
 </div>
 
-<!-- SHORT VIDEOS -->
+<!-- SHORT VIDEOS — sabhi 9:16 ratio mein -->
 <div class="vg" id="tab-short">
 
 <div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
@@ -197,10 +200,11 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <div class="vi"><div class="vn">Internship Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
 </div>
 
-<!-- ✅ CREDIT SCORE EDIT - NAYA ADD KIYA -->
+<!-- ✅ CREDIT SCORE — 9:16, video se hi thumbnail -->
 <div class="vc" onclick="openM(this)" data-title="Credit Score Edit" data-cat="Talking Head" data-dur="0:45" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4">
 <div class="vt r916">
-<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780630480/Credit_Score_zaamwr.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Credit+Score+Edit'" alt="Credit Score Edit"/>
+<video class="preview" src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4" muted preload="metadata"></video>
+<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_2,w_400,h_711,c_fill,g_auto/v1780630480/Credit_Score_zaamwr.jpg" onerror="this.style.display='none'" alt="Credit Score Edit"/>
 <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
 <span class="cat">Talking Head</span>
 </div>
@@ -224,7 +228,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 
 <section id="about">
 <div class="aiw">
-<img src="https://res.cloudinary.com/dr26u6zo8/image/upload/v1779129630/ME_bn9msi.webp" id="aphoto" alt="Lokesh"/>
+<img src="https://res.cloudinary.com/dr26u6zo8/image/upload/v1779129630/ME_bn9msi.webp" alt="Lokesh"/>
 <div class="atag">Video Editor · Lokesh</div>
 </div>
 <div>
@@ -232,7 +236,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <p class="ap">I'm Lokesh, a passionate video editor specializing in premium video production. With expertise in Adobe Premiere Pro and After Effects, I transform raw footage into polished, cinematic content.</p>
 <p class="ap">Every frame is intentional. Whether it's a fast-paced gaming montage, an emotional reel, or a cinematic brand video — I build experiences that keep viewers hooked from the first second.</p>
 <div class="ast">
-<div class="as"><div class="n" id="s2">5</div><div class="l">Projects</div></div>
+<div class="as"><div class="n">5</div><div class="l">Projects</div></div>
 <div class="as"><div class="n">2+</div><div class="l">Years Exp</div></div>
 <div class="as"><div class="n">50+</div><div class="l">Edits Done</div></div>
 <div class="as"><div class="n">5★</div><div class="l">Rating</div></div>
