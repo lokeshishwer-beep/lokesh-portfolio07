@@ -9,9 +9,9 @@
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --black:#000;--surface:#0a0a0a;--card:#111;--border:#1e1e1e;
-  --accent:#e8ff00;--white:#fff;--muted:#555;
-  --fd:'Bebas Neue',sans-serif;--fb:'DM Sans',sans-serif;
+--black:#000;--surface:#0a0a0a;--card:#111;--border:#1e1e1e;
+--accent:#e8ff00;--white:#fff;--muted:#555;
+--fd:'Bebas Neue',sans-serif;--fb:'DM Sans',sans-serif;
 }
 html{scroll-behavior:smooth}
 body{background:var(--black);color:var(--white);font-family:var(--fb);overflow-x:hidden}
@@ -68,21 +68,6 @@ h2{font-family:var(--fd);font-size:clamp(2.4rem,6vw,5rem);letter-spacing:.04em;l
 .vi{padding:.9rem 1.1rem 1.2rem}
 .vn{font-family:var(--fd);font-size:1.05rem;letter-spacing:.06em;margin-bottom:.25rem}
 .vm{font-size:.7rem;color:var(--muted);display:flex;gap:.8rem}
-#add{padding:5rem 5%;border-top:1px solid var(--border);background:var(--surface)}
-.af{max-width:680px;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2rem}
-.fg{display:flex;flex-direction:column;gap:.35rem}
-.fg.full{grid-column:1/-1}
-.fg label{font-size:.66rem;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.fg input,.fg select{background:var(--card);border:1px solid var(--border);color:var(--white);font-family:var(--fb);font-size:.84rem;padding:.7rem .9rem;outline:none;transition:border-color .2s}
-.fg input:focus,.fg select:focus{border-color:var(--accent)}
-.fg select option{background:#111}
-.fg small{font-size:.66rem;color:var(--muted);margin-top:.2rem}
-#tp{grid-column:1/-1;display:none;align-items:center;gap:1rem;margin-top:.3rem}
-#tp.show{display:flex}
-#tp img{width:120px;height:68px;object-fit:cover;border:1px solid var(--border)}
-#tp span{font-size:.74rem;color:var(--accent)}
-.badd{grid-column:1/-1;width:fit-content;padding:.82rem 2.2rem;background:var(--accent);color:#000;font-size:.74rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;border:none;cursor:pointer;transition:background .2s,transform .15s}
-.badd:hover{background:var(--white);transform:translateY(-2px)}
 #about{padding:6rem 5%;border-top:1px solid var(--border);display:grid;grid-template-columns:1fr 1.2fr;gap:5rem;align-items:center}
 .aiw{position:relative;border:1px solid var(--border);overflow:hidden;background:var(--card);max-width:400px}
 .aiw img{width:100%;display:block;filter:contrast(1.05) grayscale(15%)}
@@ -126,258 +111,202 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 .tab{padding:.65rem 1.8rem;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:var(--fb);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .tab.active{background:var(--accent);color:#000;border-color:var(--accent)}
 .tab:hover:not(.active){border-color:var(--white);color:var(--white)}
-@media(max-width:900px){.nav-links{display:none}#about{grid-template-columns:1fr}.cw{grid-template-columns:1fr}.af{grid-template-columns:1fr}.fg.full{grid-column:1}}
+@media(max-width:900px){.nav-links{display:none}#about{grid-template-columns:1fr}.cw{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-
 <nav>
-  <a href="#" class="logo">Lokesh.</a>
-  <ul class="nav-links">
-    <li><a href="#works">Work</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="https://instagram.com/lokesh.editz07" target="_blank" class="ig"><i class="fab fa-instagram"></i> @lokesh.editz07</a></li>
-  </ul>
-  <a href="#contact" class="hire-btn">Hire Me</a>
+<a href="#" class="logo">Lokesh.</a>
+<ul class="nav-links">
+<li><a href="#works">Work</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="https://instagram.com/lokesh.editz07" target="_blank" class="ig"><i class="fab fa-instagram"></i> @lokesh.editz07</a></li>
+</ul>
+<a href="#contact" class="hire-btn">Hire Me</a>
 </nav>
 
 <section id="hero">
-  <div class="hbg"></div><div class="hvl"></div>
-  <div class="hc">
-    <div class="badge"><span class="bdot"></span>Available for Freelance</div>
-    <h1>I'm<br><span>Lokesh</span><br>Video Editor</h1>
-    <p class="hsub">Turning raw footage into cinematic masterpieces. Reels, Shorts, Gaming edits &amp; motion graphics that stop the scroll.</p>
-    <div class="hbtns">
-      <a href="#works" class="bp">View My Work</a>
-      <a href="#contact" class="bg">Hire Me</a>
-    </div>
-    <div class="hstats">
-      <div><div class="sn" id="s1">4</div><div class="sl">Projects</div></div>
-      <div><div class="sn">2+</div><div class="sl">Years Exp</div></div>
-      <div><div class="sn">50+</div><div class="sl">Edits Done</div></div>
-      <div><div class="sn">5★</div><div class="sl">Rating</div></div>
-    </div>
-  </div>
+<div class="hbg"></div><div class="hvl"></div>
+<div class="hc">
+<div class="badge"><span class="bdot"></span>Available for Freelance</div>
+<h1>I'm<br><span>Lokesh</span><br>Video Editor</h1>
+<p class="hsub">Turning raw footage into cinematic masterpieces. Reels, Shorts, Gaming edits &amp; motion graphics that stop the scroll.</p>
+<div class="hbtns">
+<a href="#works" class="bp">View My Work</a>
+<a href="#contact" class="bg">Hire Me</a>
+</div>
+<div class="hstats">
+<div><div class="sn" id="s1">5</div><div class="sl">Projects</div></div>
+<div><div class="sn">2+</div><div class="sl">Years Exp</div></div>
+<div><div class="sn">50+</div><div class="sl">Edits Done</div></div>
+<div><div class="sn">5★</div><div class="sl">Rating</div></div>
+</div>
+</div>
 </section>
 
 <section id="skills">
-  <div class="lbl">What I Do</div><h2>SKILLS</h2>
-  <div class="sg">
-    <div class="sk"><div class="ski">📱</div><div class="skn">Reels & Shorts</div><div class="skd">Scroll-stopping short-form content for Instagram, YouTube & TikTok.</div></div>
-    <div class="sk"><div class="ski">🎮</div><div class="skn">Gaming Edits</div><div class="skd">High-energy montages, kill highlights & cinematic gaming moments.</div></div>
-    <div class="sk"><div class="ski">🎬</div><div class="skn">Cinematic</div><div class="skd">Color grading, LUT creation & film-quality storytelling.</div></div>
-    <div class="sk"><div class="ski">✨</div><div class="skn">Motion Graphics</div><div class="skd">Transitions, text animations, VFX overlays & dynamic intros.</div></div>
-    <div class="sk"><div class="ski">🎨</div><div class="skn">Color Grading</div><div class="skd">Professional color correction — DaVinci Resolve & Lumetri.</div></div>
-    <div class="sk"><div class="ski">🎵</div><div class="skn">Sound Design</div><div class="skd">Beat-synced edits, SFX layering & immersive audio mixing.</div></div>
-    <div class="sk"><div class="ski">🖥️</div><div class="skn">Premiere Pro</div><div class="skd">Industry-standard professional video editing workflows.</div></div>
-    <div class="sk"><div class="ski">⚡</div><div class="skn">After Effects</div><div class="skd">Advanced motion graphics, VFX & cinematic title sequences.</div></div>
-  </div>
+<div class="lbl">What I Do</div><h2>SKILLS</h2>
+<div class="sg">
+<div class="sk"><div class="ski">📱</div><div class="skn">Reels & Shorts</div><div class="skd">Scroll-stopping short-form content for Instagram, YouTube & TikTok.</div></div>
+<div class="sk"><div class="ski">🎮</div><div class="skn">Gaming Edits</div><div class="skd">High-energy montages, kill highlights & cinematic gaming moments.</div></div>
+<div class="sk"><div class="ski">🎬</div><div class="skn">Cinematic</div><div class="skd">Color grading, LUT creation & film-quality storytelling.</div></div>
+<div class="sk"><div class="ski">✨</div><div class="skn">Motion Graphics</div><div class="skd">Transitions, text animations, VFX overlays & dynamic intros.</div></div>
+<div class="sk"><div class="ski">🎨</div><div class="skn">Color Grading</div><div class="skd">Professional color correction — DaVinci Resolve & Lumetri.</div></div>
+<div class="sk"><div class="ski">🎵</div><div class="skn">Sound Design</div><div class="skd">Beat-synced edits, SFX layering & immersive audio mixing.</div></div>
+<div class="sk"><div class="ski">🖥️</div><div class="skn">Premiere Pro</div><div class="skd">Industry-standard professional video editing workflows.</div></div>
+<div class="sk"><div class="ski">⚡</div><div class="skn">After Effects</div><div class="skd">Advanced motion graphics, VFX & cinematic title sequences.</div></div>
+</div>
 </section>
 
 <section id="works">
-  <div class="lbl">Portfolio</div><h2>MY WORK</h2>
-
-  <!-- TABS -->
-  <div class="tabs">
-    <button class="tab active" onclick="switchTab('short')">📱 Short Videos</button>
-    <button class="tab" onclick="switchTab('long')">🎬 Long Videos</button>
-  </div>
-
-  <!-- SHORT VIDEOS -->
-  <div class="vg" id="tab-short">
-
-    <div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
-      <div class="vt r916">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1778434403/PORTFLIO_VIDEO_ns0x5z.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Portfolio+Showcase'" alt="Portfolio Showcase"/>
-        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <span class="cat">Cinematic</span>
-      </div>
-      <div class="vi"><div class="vn">Portfolio Showcase</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
-    </div>
-
-    <div class="vc" onclick="openM(this)" data-title="Latest Edit" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780051893/ava_raw_p6ogap.mp4">
-      <div class="vt r916">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780051893/ava_raw_p6ogap.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Latest+Edit'" alt="Latest Edit"/>
-        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <span class="cat">Cinematic</span>
-      </div>
-      <div class="vi"><div class="vn">Latest Edit</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
-    </div>
-
-    <div class="vc" onclick="openM(this)" data-title="Internship Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780471224/Intership_Edit_upgci9.mp4">
-      <div class="vt r916">
-        <img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780471224/Intership_Edit_upgci9.jpg"
-          onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Internship+Edit'" alt="Internship Edit"/>
-        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <span class="cat">Cinematic</span>
-      </div>
-      <div class="vi"><div class="vn">Internship Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
-    </div>
-    <div class="vc" onclick="openM(this)" data-title="Credit Score Edit" data-cat="Talking Head" data-dur="0:45" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4">
-  <div class="vt r916">
-    <img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780630480/Credit_Score_zaamwr.jpg"
-    onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Credit+Score+Edit'" alt="Credit Score Edit"/>
-    <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-    <span class="cat">Talking Head</span>
-  </div>
-  <div class="vi"><div class="vn">Credit Score Edit</div><div class="vm"><span>0:45</span><span>Talking Head · 2025</span></div></div>
+<div class="lbl">Portfolio</div><h2>MY WORK</h2>
+<div class="tabs">
+<button class="tab active" onclick="switchTab('short',event)">📱 Short Videos</button>
+<button class="tab" onclick="switchTab('long',event)">🎬 Long Videos</button>
 </div>
-  </div>
 
-  <!-- LONG VIDEOS -->
-  <div class="vg" id="tab-long" style="display:none">
+<!-- SHORT VIDEOS -->
+<div class="vg" id="tab-short">
 
-    <div class="vc" onclick="openM(this)" data-title="AI Selling Edit" data-cat="Cinematic" data-dur="0:28" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780145820/Ai_selling_qrjx80.mp4">
-      <div class="vt r16">
-        <img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_640,h_360,c_fill,g_auto/v1780145820/Ai_selling_qrjx80.jpg"
-          onerror="this.src='https://placehold.co/640x360/111/e8ff00?text=AI+Selling+Edit'" alt="AI Selling Edit"/>
-        <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
-        <span class="cat">Cinematic</span>
-      </div>
-      <div class="vi"><div class="vn">AI Selling Edit</div><div class="vm"><span>0:28</span><span>Cinematic · 2025</span></div></div>
-    </div>
+<div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
+<div class="vt r916">
+<img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1778434403/PORTFLIO_VIDEO_ns0x5z.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Portfolio+Showcase'" alt="Portfolio Showcase"/>
+<div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+<span class="cat">Cinematic</span>
+</div>
+<div class="vi"><div class="vn">Portfolio Showcase</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
+</div>
 
-  </div>
+<div class="vc" onclick="openM(this)" data-title="Latest Edit" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780051893/ava_raw_p6ogap.mp4">
+<div class="vt r916">
+<img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780051893/ava_raw_p6ogap.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Latest+Edit'" alt="Latest Edit"/>
+<div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+<span class="cat">Cinematic</span>
+</div>
+<div class="vi"><div class="vn">Latest Edit</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
+</div>
 
+<div class="vc" onclick="openM(this)" data-title="Internship Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780471224/Intership_Edit_upgci9.mp4">
+<div class="vt r916">
+<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780471224/Intership_Edit_upgci9.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Internship+Edit'" alt="Internship Edit"/>
+<div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+<span class="cat">Cinematic</span>
+</div>
+<div class="vi"><div class="vn">Internship Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
+</div>
+
+<!-- ✅ CREDIT SCORE EDIT - NAYA ADD KIYA -->
+<div class="vc" onclick="openM(this)" data-title="Credit Score Edit" data-cat="Talking Head" data-dur="0:45" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4">
+<div class="vt r916">
+<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780630480/Credit_Score_zaamwr.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Credit+Score+Edit'" alt="Credit Score Edit"/>
+<div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+<span class="cat">Talking Head</span>
+</div>
+<div class="vi"><div class="vn">Credit Score Edit</div><div class="vm"><span>0:45</span><span>Talking Head · 2025</span></div></div>
+</div>
+
+</div>
+
+<!-- LONG VIDEOS -->
+<div class="vg" id="tab-long" style="display:none">
+<div class="vc" onclick="openM(this)" data-title="AI Selling Edit" data-cat="Cinematic" data-dur="0:28" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780145820/Ai_selling_qrjx80.mp4">
+<div class="vt r16">
+<img src="https://res.cloudinary.com/dr26u6zo8/video/upload/so_auto,w_640,h_360,c_fill,g_auto/v1780145820/Ai_selling_qrjx80.jpg" onerror="this.src='https://placehold.co/640x360/111/e8ff00?text=AI+Selling+Edit'" alt="AI Selling Edit"/>
+<div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
+<span class="cat">Cinematic</span>
+</div>
+<div class="vi"><div class="vn">AI Selling Edit</div><div class="vm"><span>0:28</span><span>Cinematic · 2025</span></div></div>
+</div>
+</div>
 </section>
 
-
 <section id="about">
-  <div class="aiw">
-    <!--
-    ══════════════════════════════════════
-    APNI PHOTO LAGANE KE LIYE:
-    1. Cloudinary.com pe apni photo upload karo
-    2. Wahan se link copy karo
-    3. Neeche src="" mein woh link paste karo
-    ══════════════════════════════════════
-    -->
-    <img src="https://res.cloudinary.com/dr26u6zo8/image/upload/v1779129630/ME_bn9msi.webp" id="aphoto" alt="Lokesh"/>
-    <div class="atag">Video Editor · Lokesh</div>
-  </div>
-  <div>
-    <div class="lbl">About Me</div><h2>THE<br>EDITOR</h2>
-    <p class="ap">I'm Lokesh, a passionate video editor specializing in premium video production. With expertise in Adobe Premiere Pro and After Effects, I transform raw footage into polished, cinematic content.</p>
-    <p class="ap">Every frame is intentional. Whether it's a fast-paced gaming montage, an emotional reel, or a cinematic brand video — I build experiences that keep viewers hooked from the first second.</p>
-    <div class="ast">
-      <div class="as"><div class="n" id="s2">4</div><div class="l">Projects</div></div>
-      <div class="as"><div class="n">2+</div><div class="l">Years Exp</div></div>
-      <div class="as"><div class="n">50+</div><div class="l">Edits Done</div></div>
-      <div class="as"><div class="n">5★</div><div class="l">Rating</div></div>
-    </div>
-  </div>
+<div class="aiw">
+<img src="https://res.cloudinary.com/dr26u6zo8/image/upload/v1779129630/ME_bn9msi.webp" id="aphoto" alt="Lokesh"/>
+<div class="atag">Video Editor · Lokesh</div>
+</div>
+<div>
+<div class="lbl">About Me</div><h2>THE<br>EDITOR</h2>
+<p class="ap">I'm Lokesh, a passionate video editor specializing in premium video production. With expertise in Adobe Premiere Pro and After Effects, I transform raw footage into polished, cinematic content.</p>
+<p class="ap">Every frame is intentional. Whether it's a fast-paced gaming montage, an emotional reel, or a cinematic brand video — I build experiences that keep viewers hooked from the first second.</p>
+<div class="ast">
+<div class="as"><div class="n" id="s2">5</div><div class="l">Projects</div></div>
+<div class="as"><div class="n">2+</div><div class="l">Years Exp</div></div>
+<div class="as"><div class="n">50+</div><div class="l">Edits Done</div></div>
+<div class="as"><div class="n">5★</div><div class="l">Rating</div></div>
+</div>
+</div>
 </section>
 
 <section id="contact">
-  <div class="lbl">Get In Touch</div><h2>HIRE ME</h2>
-  <div class="cw">
-    <div>
-      <p style="color:var(--muted);font-size:.88rem;line-height:1.8;max-width:380px">Looking for a skilled editor for your next project? Let's create something extraordinary together.</p>
-      <div class="cls">
-        <a href="https://instagram.com/lokesh.editz07" target="_blank" class="cl"><i class="fab fa-instagram"></i> Instagram</a>
-        <a href="mailto:lokeshchoudhary7836950313@gmail.com" class="cl"><i class="fas fa-envelope"></i> Gmail</a>
-        <a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="cl"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-      </div>
-    </div>
-    <div class="cf">
-      <input type="text" id="cn" placeholder="Your Name"/>
-      <input type="email" id="ce" placeholder="Your Email"/>
-      <textarea id="cm" placeholder="Tell me about your project..."></textarea>
-      <button class="bsend" onclick="send()">Send Message</button>
-      <div class="succ" id="succ">✅ Message sent! I'll reply within 24 hours.</div>
-    </div>
-  </div>
+<div class="lbl">Get In Touch</div><h2>HIRE ME</h2>
+<div class="cw">
+<div>
+<p style="color:var(--muted);font-size:.88rem;line-height:1.8;max-width:380px">Looking for a skilled editor for your next project? Let's create something extraordinary together.</p>
+<div class="cls">
+<a href="https://instagram.com/lokesh.editz07" target="_blank" class="cl"><i class="fab fa-instagram"></i> Instagram</a>
+<a href="mailto:lokeshchoudhary7836950313@gmail.com" class="cl"><i class="fas fa-envelope"></i> Gmail</a>
+<a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="cl"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</div>
+</div>
+<div class="cf">
+<input type="text" id="cn" placeholder="Your Name"/>
+<input type="email" id="ce" placeholder="Your Email"/>
+<textarea id="cm" placeholder="Tell me about your project..."></textarea>
+<button class="bsend" onclick="send()">Send Message</button>
+<div class="succ" id="succ">✅ Message sent! I'll reply within 24 hours.</div>
+</div>
+</div>
 </section>
 
 <footer>
-  <div class="fl">Lokesh.</div>
-  <div class="fls">
-    <a href="https://instagram.com/lokesh.editz07" target="_blank"><i class="fab fa-instagram"></i> @lokesh.editz07</a>
-    <a href="mailto:lokeshchoudhary7836950313@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
-  </div>
-  <div class="fc">© 2025 Lokesh. All rights reserved.</div>
+<div class="fl">Lokesh.</div>
+<div class="fls">
+<a href="https://instagram.com/lokesh.editz07" target="_blank"><i class="fab fa-instagram"></i> @lokesh.editz07</a>
+<a href="mailto:lokeshchoudhary7836950313@gmail.com"><i class="fas fa-envelope"></i> Gmail</a>
+</div>
+<div class="fc">© 2025 Lokesh. All rights reserved.</div>
 </footer>
 
 <div class="modal" id="modal">
-  <div class="mb">
-    <button class="mx" onclick="closeM()">✕</button>
-    <div class="mvw" id="mvw"></div>
-    <div class="mttl" id="mttl"></div>
-    <div class="mmet" id="mmet"></div>
-  </div>
+<div class="mb">
+<button class="mx" onclick="closeM()">✕</button>
+<div class="mvw" id="mvw"></div>
+<div class="mttl" id="mttl"></div>
+<div class="mmet" id="mmet"></div>
+</div>
 </div>
 
 <script>
-function switchTab(type){
-  document.getElementById('tab-short').style.display = type==='short'?'grid':'none';
-  document.getElementById('tab-long').style.display = type==='long'?'grid':'none';
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  event.target.classList.add('active');
-}
-const store={};let idx=1,pThumb=null;
-function pT(e){const f=e.target.files[0];if(!f)return;pThumb=f;document.getElementById('tpi').src=URL.createObjectURL(f);document.getElementById('tp').classList.add('show')}
-function addV(){
-  const t=document.getElementById('it').value.trim();
-  const c=document.getElementById('ic').value;
-  const d=document.getElementById('id').value.trim()||'—';
-  const y=document.getElementById('iy').value.trim()||'2025';
-  const vf=document.getElementById('ivf').files[0];
-  const vu=document.getElementById('ivu').value.trim();
-  if(!t){alert('Title daalo!');return}
-  if(!pThumb){alert('Thumbnail upload karo!');return}
-  if(!vf&&!vu){alert('Video file ya link daalo!');return}
-  const tu=URL.createObjectURL(pThumb);
-  const i=idx++;
-  store[i]=vf?{type:'file',url:URL.createObjectURL(vf)}:{type:'url',url:vu};
-  const card=document.createElement('div');
-  card.className='vc';card.setAttribute('data-title',t);card.setAttribute('data-cat',c);card.setAttribute('data-dur',d);card.setAttribute('data-idx',i);
-  card.onclick=function(){openM(this)};
-  card.innerHTML=`<div class="vt r16"><img src="${tu}" alt="${t}"/><div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div><span class="cat">${c}</span></div><div class="vi"><div class="vn">${t}</div><div class="vm"><span>${d}</span><span>${c} · ${y}</span></div></div>`;
-  document.getElementById('vg').appendChild(card);
-  const cnt=document.querySelectorAll('.vc').length;
-  document.getElementById('s1').textContent=cnt;document.getElementById('s2').textContent=cnt;
-  document.getElementById('it').value='';document.getElementById('id').value='';document.getElementById('iy').value='';
-  document.getElementById('ivf').value='';document.getElementById('ivu').value='';document.getElementById('ith').value='';
-  document.getElementById('tp').classList.remove('show');pThumb=null;
-  alert('✅ "'+t+'" add ho gaya!');
-  document.getElementById('works').scrollIntoView({behavior:'smooth'});
+function switchTab(type,event){
+document.getElementById('tab-short').style.display=type==='short'?'grid':'none';
+document.getElementById('tab-long').style.display=type==='long'?'grid':'none';
+document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+event.target.classList.add('active');
 }
 function openM(card){
-  const title=card.getAttribute('data-title');
-  const cat=card.getAttribute('data-cat');
-  const dur=card.getAttribute('data-dur');
-  const i=card.getAttribute('data-idx');
-  const src=card.getAttribute('data-src');
-  document.getElementById('mttl').textContent=title;
-  document.getElementById('mmet').textContent=cat+' · '+dur;
-  const w=document.getElementById('mvw');
-  if(i&&store[i]){
-    const v=store[i];
-    if(v.type==='file'){w.innerHTML='<video src="'+v.url+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
-    else{
-      const u=v.url;
-      if(u.includes('youtube.com')||u.includes('youtu.be')){
-        const id=u.includes('youtu.be')?u.split('/').pop().split('?')[0]:new URLSearchParams(u.split('?')[1]).get('v');
-        w.innerHTML='<iframe src="https://www.youtube.com/embed/'+id+'?autoplay=1" frameborder="0" allowfullscreen style="aspect-ratio:16/9;width:100%"></iframe>';
-      }else{w.innerHTML='<video src="'+u+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
-    }
-  }else if(src){w.innerHTML='<video src="'+src+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
-  document.getElementById('modal').classList.add('active');
+const title=card.getAttribute('data-title');
+const cat=card.getAttribute('data-cat');
+const dur=card.getAttribute('data-dur');
+const src=card.getAttribute('data-src');
+document.getElementById('mttl').textContent=title;
+document.getElementById('mmet').textContent=cat+' · '+dur;
+const w=document.getElementById('mvw');
+if(src){w.innerHTML='<video src="'+src+'" controls autoplay controlsList="nodownload" oncontextmenu="return false" style="max-height:75vh;width:100%"></video>';}
+document.getElementById('modal').classList.add('active');
 }
 function closeM(){document.getElementById('modal').classList.remove('active');document.getElementById('mvw').innerHTML='';}
 document.getElementById('modal').addEventListener('click',function(e){if(e.target===this)closeM()});
 function send(){
-  const n=document.getElementById('cn').value.trim();
-  const e=document.getElementById('ce').value.trim();
-  const m=document.getElementById('cm').value.trim();
-  if(!n||!e||!m){alert('Sab fields bharo!');return}
-  window.open('mailto:lokeshchoudhary7836950313@gmail.com?subject='+encodeURIComponent('Inquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\nMessage:\n'+m));
-  document.getElementById('succ').classList.add('show');
-  document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('cm').value='';
+const n=document.getElementById('cn').value.trim();
+const e=document.getElementById('ce').value.trim();
+const m=document.getElementById('cm').value.trim();
+if(!n||!e||!m){alert('Sab fields bharo!');return}
+window.open('mailto:lokeshchoudhary7836950313@gmail.com?subject='+encodeURIComponent('Inquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\nMessage:\n'+m));
+document.getElementById('succ').classList.add('show');
+document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('cm').value='';
 }
 </script>
 </body>
