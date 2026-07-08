@@ -61,7 +61,6 @@ h2{font-family:var(--fd);font-size:clamp(2.4rem,6vw,5rem);letter-spacing:.04em;l
 .r16{padding-top:56.25%}.r916{padding-top:177.77%}
 .vt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .vc:hover .vt img{transform:scale(1.05)}
-/* Video preview on hover for cards without thumbnail */
 .vt video.preview{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .3s}
 .vc:hover .vt video.preview{opacity:1}
 .po{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.4);opacity:0;transition:opacity .25s}
@@ -114,20 +113,38 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 .tab{padding:.65rem 1.8rem;border:1px solid var(--border);background:transparent;color:var(--muted);font-family:var(--fb);font-size:.76rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;transition:all .2s}
 .tab.active{background:var(--accent);color:#000;border-color:var(--accent)}
 .tab:hover:not(.active){border-color:var(--white);color:var(--white)}
-@media(max-width:900px){.nav-links{display:none}#about{grid-template-columns:1fr}.cw{grid-template-columns:1fr}}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem;z-index:210}
+.hamburger span{width:24px;height:2px;background:var(--white);transition:transform .25s,opacity .25s}
+.hamburger.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:900px){
+.hire-btn{display:none}
+.hamburger{display:flex}
+.nav-links{display:flex;position:fixed;top:0;right:0;height:100vh;width:min(78vw,320px);background:#050505;border-left:1px solid var(--border);flex-direction:column;align-items:flex-start;justify-content:center;gap:2rem;padding:2rem 2.2rem;transform:translateX(100%);transition:transform .3s ease;z-index:205}
+.nav-links.open{transform:translateX(0)}
+.nav-links a{font-size:.9rem}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:201}
+.nav-overlay.active{display:block}
+#about{grid-template-columns:1fr}.cw{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 <nav>
 <a href="#" class="logo">Lokesh.</a>
-<ul class="nav-links">
-<li><a href="#works">Work</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#contact">Contact</a></li>
+<div class="nav-overlay" id="navOverlay"></div>
+<ul class="nav-links" id="navLinks">
+<li><a href="#works" onclick="closeNav()">Work</a></li>
+<li><a href="#skills" onclick="closeNav()">Skills</a></li>
+<li><a href="#about" onclick="closeNav()">About</a></li>
+<li><a href="#contact" onclick="closeNav()">Contact</a></li>
 <li><a href="https://instagram.com/lokesh.editz07" target="_blank" class="ig"><i class="fab fa-instagram"></i> @lokesh.editz07</a></li>
 </ul>
 <a href="#contact" class="hire-btn">Hire Me</a>
+<button class="hamburger" id="hamburger" onclick="toggleNav()" aria-label="Toggle menu">
+<span></span><span></span><span></span>
+</button>
 </nav>
 
 <section id="hero">
@@ -135,7 +152,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <div class="hc">
 <div class="badge"><span class="bdot"></span>Available for Freelance</div>
 <h1>I'm<br><span>Lokesh</span><br>Video Editor</h1>
-<p class="hsub">Turning raw footage into cinematic masterpieces. Reels, Shorts, Gaming edits &amp; motion graphics that stop the scroll.</p>
+<p class="hsub">Turning raw footage into cinematic masterpieces. Reels, Shorts, Gaming edits & motion graphics that stop the scroll.</p>
 <div class="hbtns">
 <a href="#works" class="bp">View My Work</a>
 <a href="#contact" class="bg">Hire Me</a>
@@ -170,7 +187,6 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <button class="tab" onclick="switchTab('long',event)">🎬 Long Videos</button>
 </div>
 
-<!-- SHORT VIDEOS — sabhi 9:16 ratio mein -->
 <div class="vg" id="tab-short">
 
 <div class="vc" onclick="openM(this)" data-title="Portfolio Showcase" data-cat="Cinematic" data-dur="0:22" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1778434403/PORTFLIO_VIDEO_ns0x5z.mp4">
@@ -191,16 +207,15 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <div class="vi"><div class="vn">Latest Edit</div><div class="vm"><span>0:22</span><span>Cinematic · 2025</span></div></div>
 </div>
 
-<div class="vc" onclick="openM(this)" data-title="Internship Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780471224/Intership_Edit_upgci9.mp4">
+<div class="vc" onclick="openM(this)" data-title="Internship Edit" data-cat="Cinematic" data-dur="0:30" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1783496394/Final_Video_eenray.mp4">
 <div class="vt r916">
-<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1780471224/Intership_Edit_upgci9.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Internship+Edit'" alt="Internship Edit"/>
+<img src="https://res.cloudinary.com/dintkk1to/video/upload/so_auto,w_400,h_711,c_fill,g_auto/v1783496394/Final_Video_eenray.jpg" onerror="this.src='https://placehold.co/400x711/111/e8ff00?text=Internship+Edit'" alt="Internship Edit"/>
 <div class="po"><div class="pc"><svg width="18" height="18" viewBox="0 0 24 24" fill="black"><polygon points="5,3 19,12 5,21"/></svg></div></div>
 <span class="cat">Cinematic</span>
 </div>
 <div class="vi"><div class="vn">Internship Edit</div><div class="vm"><span>0:30</span><span>Cinematic · 2025</span></div></div>
 </div>
 
-<!-- ✅ CREDIT SCORE — 9:16, video se hi thumbnail -->
 <div class="vc" onclick="openM(this)" data-title="Credit Score Edit" data-cat="Talking Head" data-dur="0:45" data-src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4">
 <div class="vt r916">
 <video class="preview" src="https://res.cloudinary.com/dintkk1to/video/upload/v1780630480/Credit_Score_zaamwr.mp4" muted preload="metadata"></video>
@@ -213,7 +228,6 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 
 </div>
 
-<!-- LONG VIDEOS -->
 <div class="vg" id="tab-long" style="display:none">
 <div class="vc" onclick="openM(this)" data-title="AI Selling Edit" data-cat="Cinematic" data-dur="0:28" data-src="https://res.cloudinary.com/dr26u6zo8/video/upload/v1780145820/Ai_selling_qrjx80.mp4">
 <div class="vt r16">
@@ -252,7 +266,7 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 <div class="cls">
 <a href="https://instagram.com/lokesh.editz07" target="_blank" class="cl"><i class="fab fa-instagram"></i> Instagram</a>
 <a href="mailto:lokeshchoudhary7836950313@gmail.com" class="cl"><i class="fas fa-envelope"></i> Gmail</a>
-<a href="https://wa.me/91XXXXXXXXXX" target="_blank" class="cl"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+<a href="https://wa.me/91YOURNUMBER" target="_blank" class="cl"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </div>
 </div>
 <div class="cf">
@@ -284,6 +298,17 @@ footer{padding:1.8rem 5%;border-top:1px solid var(--border);display:flex;justify
 </div>
 
 <script>
+function toggleNav(){
+document.getElementById('navLinks').classList.toggle('open');
+document.getElementById('navOverlay').classList.toggle('active');
+document.getElementById('hamburger').classList.toggle('active');
+}
+function closeNav(){
+document.getElementById('navLinks').classList.remove('open');
+document.getElementById('navOverlay').classList.remove('active');
+document.getElementById('hamburger').classList.remove('active');
+}
+document.getElementById('navOverlay').addEventListener('click',closeNav);
 function switchTab(type,event){
 document.getElementById('tab-short').style.display=type==='short'?'grid':'none';
 document.getElementById('tab-long').style.display=type==='long'?'grid':'none';
@@ -307,7 +332,9 @@ function send(){
 const n=document.getElementById('cn').value.trim();
 const e=document.getElementById('ce').value.trim();
 const m=document.getElementById('cm').value.trim();
+const emailPattern=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 if(!n||!e||!m){alert('Sab fields bharo!');return}
+if(!emailPattern.test(e)){alert('Sahi email daalo, jaise: name@example.com');return}
 window.open('mailto:lokeshchoudhary7836950313@gmail.com?subject='+encodeURIComponent('Inquiry from '+n)+'&body='+encodeURIComponent('Name: '+n+'\nEmail: '+e+'\n\nMessage:\n'+m));
 document.getElementById('succ').classList.add('show');
 document.getElementById('cn').value='';document.getElementById('ce').value='';document.getElementById('cm').value='';
